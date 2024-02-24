@@ -3,17 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	var ageOne = 12
+	var ages = []int{23, 45, 34}
 
-	var nameOne = "Ama"
+	var names = [4]string{"Ama", "Kofi", "Kwadwo", "Afua"}
 
-	fmt.Printf("my age is %v and my name is %v \n", ageOne, nameOne)
-	fmt.Printf("my age is %q and my name is %q \n", ageOne, nameOne)
-	fmt.Printf("age is of type %T \n", ageOne)
-	fmt.Printf("You scored %f points \n", 225.55)
-	fmt.Printf("You scored %0.1f points \n", 225.55)
+	ages[2] = 2
+	fmt.Println(ages, len(ages))
 
-	var str = fmt.Sprintf("my age is %v and my name is %v", ageOne, nameOne)
+	ages = append(ages, 86)
 
-	fmt.Println("the saved string is", str)
+	fmt.Println(ages, len(ages))
+
+	fmt.Println(names, len(names))
+
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+
+	fmt.Println(rangeOne, rangeTwo, rangeThree)
+
 }

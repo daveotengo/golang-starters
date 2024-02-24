@@ -4,24 +4,16 @@ import "fmt"
 
 func main() {
 	var ageOne = 12
-	var ageTwo = 23
-	ageThree := 34
 
 	var nameOne = "Ama"
-	var nameTwo = "Adjoa"
-	nameThree := "Kwasi"
 
-	//bits and memory
-	var numOne int8 = 127
-	var numTwo int8 = -128
-	var numThree uint16 = 25694
+	fmt.Printf("my age is %v and my name is %v \n", ageOne, nameOne)
+	fmt.Printf("my age is %q and my name is %q \n", ageOne, nameOne)
+	fmt.Printf("age is of type %T \n", ageOne)
+	fmt.Printf("You scored %f points \n", 225.55)
+	fmt.Printf("You scored %0.1f points \n", 225.55)
 
-	fmt.Println(ageOne, ageTwo, ageThree)
+	var str = fmt.Sprintf("my age is %v and my name is %v", ageOne, nameOne)
 
-	nameThree = "Yaa"
-
-	fmt.Println(nameOne, nameTwo, nameThree)
-
-	fmt.Println(numOne, numTwo, numThree)
-
+	fmt.Println("the saved string is", str)
 }

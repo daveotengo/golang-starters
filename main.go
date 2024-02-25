@@ -14,11 +14,11 @@ func main() {
 	}
 
 	for index, value := range names {
-		fmt.Printf("The value of index %v is  %v", value, index)
+		fmt.Printf("The value of index %v is  %v \n", value, index)
 	}
 
 	for _, value := range names {
-		fmt.Printf("The value is  %v", value)
+		fmt.Printf("The value is  %v \n", value)
 	}
 
 }

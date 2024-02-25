@@ -3,22 +3,24 @@ package main
 import "fmt"
 
 func main() {
-	for i := 0; i < 5; i++ {
-		fmt.Println("value of i is:", i)
+	age := 45
+
+	if age < 30 {
+		fmt.Println("age is less than 30 ")
+	} else if age < 40 {
+		fmt.Println("age is less than 40")
+	} else {
+		fmt.Println("age is equal 45")
 	}
 
-	names := []string{"mario", "luigi", "yooshi", "peach"}
-
-	for i := 0; i < len(names); i++ {
-		fmt.Println("the value of i is:", names[i])
-	}
-
+	names := []string{"kwasi", "kojo", "abena", "yaw", "edward"}
 	for index, value := range names {
-		fmt.Printf("The value of index %v is  %v \n", index, value)
-	}
+		if index == 1 {
+			fmt.Println("continue at pos ", index)
+			continue
+		}
 
-	for _, value := range names {
-		fmt.Printf("The value is  %v \n", value)
+		fmt.Printf("the value at pos %v is %v \n", index, value)
 	}
 
 }

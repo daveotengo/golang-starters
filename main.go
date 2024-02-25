@@ -19,7 +19,6 @@ func main() {
 			fmt.Println("continue at pos ", index)
 			continue
 		}
-
 		fmt.Printf("the value at pos %v is %v \n", index, value)
 	}
 

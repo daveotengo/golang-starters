@@ -14,7 +14,7 @@ func main() {
 	}
 
 	for index, value := range names {
-		fmt.Printf("The value of index %v is  %v \n", value, index)
+		fmt.Printf("The value of index %v is  %v \n", index, value)
 	}
 
 	for _, value := range names {

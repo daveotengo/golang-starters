@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -19,5 +20,6 @@ func getInitials(n string) (string, string) {
 }
 
 func main() {
-	getInitials("David Oteng")
+	f1, f2 := getInitials("David Oteng")
+	fmt.Println(f1, f2)
 }

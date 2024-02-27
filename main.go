@@ -2,14 +2,27 @@ package main
 
 import "fmt"
 
-func updateName(x string) string {
-	x = "wedge"
-	return x
+func updateName(x *string) {
+	*x = "wedge"
 }
 
 func main() {
+
 	name := "tifa"
-	name = updateName(name)
+
+	//updateName(name)
+
+	fmt.Println("memory address of name is", &name)
+
+	m := &name
 
 	fmt.Println(name)
+
+	fmt.Println("memory address of name is", m)
+
+	fmt.Println("the value at memory address", *m)
+
+	updateName(m)
+	fmt.Println(name)
+
 }

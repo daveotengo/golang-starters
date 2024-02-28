@@ -2,27 +2,15 @@ package main
 
 import "fmt"
 
-func updateName(x *string) {
-	*x = "wedge"
-}
-
 func main() {
+	myBill := newBill("mario's bill")
 
-	name := "tifa"
+	fmt.Println(myBill)
+	myBill.updateTip(10)
+	myBill.addItem("onion soup", 4.50)
+	myBill.addItem("veg pie", 8.95)
+	myBill.addItem("toffee pudding", 4.95)
+	myBill.addItem("coffee", 3.25)
 
-	//updateName(name)
-
-	fmt.Println("memory address of name is", &name)
-
-	m := &name
-
-	fmt.Println(name)
-
-	fmt.Println("memory address of name is", m)
-
-	fmt.Println("the value at memory address", *m)
-
-	updateName(m)
-	fmt.Println(name)
-
+	fmt.Println(myBill.format())
 }

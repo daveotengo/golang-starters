@@ -32,25 +32,26 @@ func getInput(prompt string, r *bufio.Reader) (string, error) {
 
 func promptOptions(b bill) {
 	reader := bufio.NewReader(os.Stdin)
-	opt, _ := getInput("Choose option (a -add item s -save bill, t - add tip): ", reader)
+	opt, _ := getInput("Choose option (a -add item, s -save bill, t - add tip): ", reader)
 	fmt.Println(opt)
 
 	switch opt {
 	case "a":
-		name, _ := getInput("Item name", reader)
-		price, _ := getInput("Item price", reader)
+		name, _ := getInput("Item name: ", reader)
+		price, _ := getInput("Item price: ", reader)
 		p, err := strconv.ParseFloat(price, 64)
 		if err != nil {
-			fmt.Println("The price must be a number")
+			fmt.Println("The price must be a number ")
 			promptOptions(b)
 		}
 		b.addItem(name, p)
-		fmt.Println("item added", name, price)
+		fmt.Println("item added ", name, price)
+		promptOptions(b)
 	case "t":
-		tip, _ := getInput("Enter tip amount ($):", reader)
+		tip, _ := getInput("Enter tip amount ($): ", reader)
 		t, err := strconv.ParseFloat(tip, 64)
 		if err != nil {
-			fmt.Println("The price must be a number")
+			fmt.Println("The price must be a number ")
 			promptOptions(b)
 		}
 		b.updateTip(t)
